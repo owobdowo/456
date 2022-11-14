@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+        </script>
+    </head>
+    <body>
+        <script>
+            let book = new Object()
+            book.title="HTML5";
+            book.author="황기태";
+            book.price=20000;
+            document.write("book : "+book["title"]+","+book["author"]+","+book["price"]);
+            function book2(){
+                this.title="HTML5";
+                this.author="KKH";
+                this.price=20000;
+            }
+            let books=new book2();
+            document.write("<br>")
+            
+            document.write("books : "+books.title+","+books.author+","+books.price);
+        </script>
+    </body>
+</html>

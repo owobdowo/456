@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function book (){
+                this.title
+                this.author
+                this.price
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            let bookArray=new Array(5);
+           
+            
+            for(let i=0;i<5;i++){
+                let str=prompt("입력하세요");
+                
+                let arr = str.split(",");
+                
+                let B=new book();
+                B.title=arr[0];
+                B.author=arr[1];
+                let arr_price=parseInt(arr[2]);
+                B.price=arr_price;
+                
+                bookArray[i]=B;
+                
+                document.write(str+"<br>");
+            }
+            let MIN=bookArray[0].price
+            let MIN_num=0
+            for(let i=0;i<5;i++){
+                if (bookArray[i].price<MIN){
+                    MIN=bookArray[i].price;
+                    MIN_num=i;
+                }
+            }
+            doocument.write("가장 가격이 싼 책은"+bookArray[MIN_num].title);
+            
+
+        </script>
+    </body>
+</html>
